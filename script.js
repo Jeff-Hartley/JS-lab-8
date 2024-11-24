@@ -33,7 +33,6 @@ let convertedStudent = JSON.parse(jsonStudent);
 console.log(convertedStudent);
 console.log(" "); // creates a gap in console for better reading
 
-
 // extracting name and courses from the student object through destructuring
 let { name, courses } = student; // instruction didn't ask for anything done with this other that destructuring
 
@@ -42,3 +41,19 @@ let scores = [76, 90, 87, 99, 67];
 let [firstScore, secondScore] = scores;
 
 console.log(`First score destructured: ${firstScore}. Second score destructured: ${secondScore}`);
+console.log(" "); // creates a gap in console for better reading
+
+//using spread operator to clone the student object
+let studentClone = { ...student };
+
+//adding a new property
+studentClone.graduationYear = 2026; 
+
+console.log(studentClone);
+console.log(" "); // creates a gap in console for better reading
+
+//creating array & merging it with courses array
+let newCourses = ['Numeric Computing', 'Database Programming', 'Object-Oriented Programming', 'Advanced Front-End Programming'];
+let mergedCourses = [...student.courses, ...newCourses]; // instruction only asked for merge
+
+
