@@ -11,6 +11,16 @@ let student = {
         Age of student: ${student.age}
         Are they enrolled? ${student.enrolled}
         The students courses: ${student.courses}`;
+    },
+
+    //method to add a new course
+    addCourse: function(newCourse) {
+        this.courses.push(newCourse);
+        console.log(`${newCourse} added to the students courses`);
+    },
+
+    totalCourseNumber: function() {
+        return this.courses.length;
     }
 }
 
@@ -34,7 +44,9 @@ console.log(convertedStudent);
 console.log(" "); // creates a gap in console for better reading
 
 // extracting name and courses from the student object through destructuring
-let { name, courses } = student; // instruction didn't ask for anything done with this other that destructuring
+let { name, courses } = student;
+console.log(`I am ${name} and my courses are ${courses}`);
+console.log(" "); // creates a gap in console for better reading
 
 //creating an array and destructuring the first two scores
 let scores = [76, 90, 87, 99, 67];
@@ -54,6 +66,19 @@ console.log(" "); // creates a gap in console for better reading
 
 //creating array & merging it with courses array
 let newCourses = ['Numeric Computing', 'Database Programming', 'Object-Oriented Programming', 'Advanced Front-End Programming'];
-let mergedCourses = [...student.courses, ...newCourses]; // instruction only asked for merge
+let mergedCourses = [...student.courses, ...newCourses];
+
+console.log(mergedCourses);
+console.log(" "); // creates a gap in console for better reading
+
+//using the methods added to the student object to add a course and return the number of courses
+// displaying number of courses first, adding a course, showing it has been added, then displaying all courses
+console.log(student.totalCourseNumber() + " courses");
+student.addCourse("Technical Workplace Writing Skills");
+console.log(student.totalCourseNumber() + " courses");
+console.log(" "); // creates a gap in console for better reading
+
+console.log(student.courses);
+
 
 
