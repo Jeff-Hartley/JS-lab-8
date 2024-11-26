@@ -80,5 +80,14 @@ console.log(" "); // creates a gap in console for better reading
 
 console.log(student.courses);
 
+// getting the total sum of the scores
+let sumOfScores = scores.reduce((acc, score) => acc + score);
+
+// dividing the sum of scores by the length of the scores array
+let average = sumOfScores / scores.length;
+
+console.log(" "); // creates a gap in console for better reading
+console.log(`${average} is the sum of the scores`);
+
 
 
